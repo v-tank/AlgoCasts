@@ -1,2 +1,1 @@
 # AlgoCasts
-Practicing Interview Questions
