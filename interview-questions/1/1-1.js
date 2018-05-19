@@ -13,5 +13,5 @@ function hasUniqueChars(str) {
   return true;
 }
 
-hasUniqueChars("palindrome");
+hasUniqueChars("palindrome"); 
 hasUniqueChars("charmander");
