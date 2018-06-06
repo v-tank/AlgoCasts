@@ -8,15 +8,24 @@
 //   vowels('Why?') --> 0
 
 function vowels(str) {
-  var counter = 0;
+  // RegEx checks if there is a match for any of the letters inside the square brackets; /g checks through the entire length instead of the first match; /i makes the check case-insensitive
+  var counter = str.match(/[aeiou]/gi);
+  // if there's a match, counter becomes an array with all the matches. If not, it returns null
 
-  for (let char of str.toLowerCase()) {
-    if ("aeiou".includes(char)) {
-      counter++;
-    }
-  }
-
-  return counter;
+  // checks if counter is truthy. If so, return the length of the array else send a 0.
+  return counter ? counter.length : 0;
 }
 
 module.exports = vowels;
+
+// function vowels(str) {
+//   var counter = 0;
+
+//   for (let char of str.toLowerCase()) {
+//     if ("aeiou".includes(char)) {
+//       counter++;
+//     }
+//   }
+
+//   return counter;
+// }
