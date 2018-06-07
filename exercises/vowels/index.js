@@ -20,9 +20,9 @@ module.exports = vowels;
 
 // function vowels(str) {
 //   var counter = 0;
-
+//   var checker = ["a", "e", "i", "o", "u"];
 //   for (let char of str.toLowerCase()) {
-//     if ("aeiou".includes(char)) {
+//     if (checker.includes(char)) {
 //       counter++;
 //     }
 //   }
