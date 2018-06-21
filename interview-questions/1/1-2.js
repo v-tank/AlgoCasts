@@ -1,9 +1,10 @@
-function isPermutation(str1, str2){
-  console.log(simplifyString(str1) === simplifyString(str2));
+function permutationChecker(str1, str2){
+  return (cleanupString(str1) === cleanupString(str2));
 }
 
-function simplifyString(str) {
+function cleanupString(str){
   return str.toLowerCase().split("").sort().join("");
 }
 
-isPermutation("WhatisGoi nGon", "GoingoNWhatis ");
+
+console.log(permutationChecker("raceCAR ", "   RACEcar"));
