@@ -1,17 +1,13 @@
-function hasUniqueChars(str) {
-  var bools = [];
+function uniqueChars(str){
+  let chars = {};
+
   for (let char of str) {
-    if (bools[char]) {
+    if (chars[char]) {
       console.log(false);
-      console.log(bools);
       return false;
     } 
-    bools[char] = true;
+    chars[char] = true;
   }
   console.log(true);
-  console.log(bools);
   return true;
 }
-
-hasUniqueChars("palindrome"); 
-hasUniqueChars("charmander");
