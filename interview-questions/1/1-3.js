@@ -1,6 +1,5 @@
 function URLify(str, len) {
-  str = str.replace(/[^\w]/g, '').toLowerCase().split('');
-  console.log(str);
+  return str.trim().replace(/\s+/g, "%20f");
 }
 
-URLify("Mr    John Smith     .", 13);
+URLify("Mr    John Smith     ", 13);
