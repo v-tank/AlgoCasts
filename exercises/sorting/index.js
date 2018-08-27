@@ -51,6 +51,7 @@ function selectionSort(arr) {
   return arr;
 }
 
+// Time Complexity: O(n*log(n)); Space Complexity: O(n)
 function mergeSort(arr) {
   if (arr.length === 1) {
     return arr;
@@ -77,4 +78,28 @@ function merge(left, right) {
   return [...results, ...left, ...right];
 }
 
-module.exports = { bubbleSort, selectionSort, mergeSort, merge };
+function quickSort(arr) {
+
+  if(arr.length <= 1) {
+    return arr;
+  }
+
+  var lower = [], greater = [];
+
+  var pivot = arr.splice(Math.floor(arr.length / 2),1);
+
+  for (var i = arr.length - 1 ; i >= 0; i--){
+    if ( arr[i] <= pivot) {
+      lower.push(arr[i]);
+    } else {
+      greater.push(arr[i]);
+    }
+  }
+
+  var c = [];
+
+  return c.concat(quickSort(lower), pivot, quickSort(greater));
+};
+
+
+module.exports = { bubbleSort, selectionSort, mergeSort, merge, quickSort };
